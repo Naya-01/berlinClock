@@ -45,4 +45,17 @@ class berlinClock{
         }
         return $ligneHours;
     }
+
+    public function getFiveHours($hours){
+        $ligneHours ="";
+        $block1Hours=$hours/5;
+        for($i=1;$i<=4;$i++){
+            if($i<=$block1Hours) $ligneHours .= "R";
+            else $ligneHours .= "O";
+        }
+        return $ligneHours;
+    }
+
+
+
 }

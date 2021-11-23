@@ -60,6 +60,9 @@ class berlinClock{
         return ($second%2==0)?"R" : "O";
     }
 
+    public function getHorloge($heures,$minutes,$secondes){
+        return $this->getSecond($secondes) . " " . $this->getFiveHours($heures) . " " . $this->getSimpleHours($heures) . " " . $this->getFiveMinutes($minutes) . " " . $this->getSimpleMinutes($minutes);
+    }
 
 
 }

@@ -34,4 +34,15 @@ class berlinClock{
         }
         return $ligneMinute;
     }
+
+    public function getSimpleHours($hours){
+        $ligneHours ="";
+        $block1Hours=$hours%5;
+
+        for($i=1;$i<=4;$i++){
+            if($i<=$block1Hours) $ligneHours .= "R";
+            else $ligneHours .= "O";
+        }
+        return $ligneHours;
+    }
 }

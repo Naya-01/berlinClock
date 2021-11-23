@@ -35,6 +35,14 @@ class berlinClockTest extends TestCase{
         $this->assertEquals("OOOO", $berlin->getFiveHours(1));
     }
 
+    public function testSecond(): void{
+        $berlin = new berlinClock();
+        $this->assertEquals("O", $berlin->getSecond(1));
+        $this->assertEquals("R", $berlin->getSecond(2));
+    }
+
+
+
 
 
 

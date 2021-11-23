@@ -56,6 +56,10 @@ class berlinClock{
         return $ligneHours;
     }
 
+    public function getSecond($second){
+        return ($second%2==0)?"R" : "O";
+    }
+
 
 
 }

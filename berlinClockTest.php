@@ -22,15 +22,14 @@ class berlinClockTest extends TestCase{
         $this->assertEquals("YOOO", $berlin->getSimpleMinutes(16));
     }
 
-    public function testFiveMinutes(): void{
-        $berlin = new berlinClock();
-        $this->assertEquals("YYRYOOOOOOO",$berlin->getFiveMinutes(24));
-        $this->assertEquals("YYRYYRYYRYY",$berlin->getFiveMinutes(56));
-    }
-
     public function testFiveMinutes2LampeAllume(){
         $berlin = new berlinClock();
         $this->assertEquals("YYOOOOOOOOO",$berlin->getFiveMinutes(12));
+    }
+
+    public function testFiveMinutes4LampeAllume(){
+        $berlin = new berlinClock();
+        $this->assertEquals("YYRYOOOOOOO",$berlin->getFiveMinutes(24));
     }
 
     public function testSimpleHours(): void{

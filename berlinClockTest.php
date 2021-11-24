@@ -80,6 +80,10 @@ class berlinClockTest extends TestCase{
     public function testSecond(): void{
         $berlin = new berlinClock();
         $this->assertEquals("O", $berlin->getSecond(1));
+    }
+
+    public function testSecondPair():void{
+        $berlin = new berlinClock();
         $this->assertEquals("R", $berlin->getSecond(2));
     }
 

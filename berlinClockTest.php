@@ -9,13 +9,17 @@ class berlinClockTest extends TestCase{
 
     public function testSimpleMinute(): void{
         $berlin = new berlinClock();
-        $this->assertEquals("YOOO", $berlin->getSimpleMinutes(16));
         $this->assertEquals("YYOO", $berlin->getSimpleMinutes(22));
     }
 
     public function testSimpleMinuteLampeEteinte():void{
         $berlin = new berlinClock();
         $this->assertEquals("OOOO", $berlin->getSimpleMinutes(10));
+    }
+
+    public function testSimpleMinute1LampeAllume():void{
+        $berlin = new berlinClock();
+        $this->assertEquals("YOOO", $berlin->getSimpleMinutes(16));
     }
 
     public function testFiveMinutes(): void{
